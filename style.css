@@ -1,0 +1,301 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.btn__home {
+    display: flex;
+    margin-top: 30px;
+    margin-left: 20px;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    font-size: 12px;
+    text-transform: uppercase;
+    text-decoration: dashed;
+    width: 130px;
+    height: 50px;
+    background-color: #0056b3;
+    color: white;
+    border-radius: 5px;
+}
+
+
+h1 {
+    margin-left: 50px;
+    font-style: italic;
+    text-decoration: underline;
+    text-underline-offset: 10px;
+}
+
+h2 {
+    display: flex;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0056b3;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.logo {
+    max-width: 100px;
+    margin-right: 50px;
+}
+
+.container {
+    width: 80%;
+    margin: 20px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+
+.images img {
+    width: 30%;
+    margin: 5px;
+    border-radius: 10px;
+    
+}
+
+button {
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px 5px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #003d80;
+}
+
+.project-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.project {
+    width: 30%;
+    padding: 15px;
+    background: #e6e6e6;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.project img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.social {
+    width: auto;
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+}
+
+.social a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.news article {
+    background: #e6e6e6;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+/* Улучшаем контейнер донатов */
+.donate.container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+/* Стили для каждого блока внутри donate */
+.donate.container div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: #f8f8f8;
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    border-left: 5px solid #0056b3;
+    transition: all 0.3s ease;
+}
+
+/* Добавляем анимацию при наведении */
+.donate.container div:hover {
+    transform: scale(1.03);
+    border-left: 5px solid #ff6b6b;
+}
+
+/* Заголовки внутри donate */
+.donate.container h2 {
+    font-size: 20px;
+    color: #0056b3;
+}
+
+/* Номера карт и текст */
+.donate.container p {
+    font-size: 18px;
+    font-weight: bold;
+    color: #222;
+    margin-top: 5px;
+}
+
+/* Улучшаем кнопки */
+.donate.container button {
+    display: inline-block;
+    padding: 12px 25px;
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    background: #007bff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Анимация кнопки при наведении */
+.donate.container button:hover {
+    background: #ff6b6b;
+    transform: scale(1.05);
+}
+
+/* Иконки для платёжных систем */
+.donate.container .off-number::before {
+    content: "💳"; 
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+.donate.container .paypal::before {
+    content: "💰"; 
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+.donate.container .privat::before {
+    content: "🏦"; 
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+.donate.container .mono::before {
+    content: "🏦"; 
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+/* Стили для мобильных устройств */
+@media (max-width: 768px) {
+    .header .logo {
+        display: none; /* Убираем изображение из header */
+    }
+    
+    .header h1 {
+        font-size: 20px;
+        text-align: center;
+        padding: 10px;
+        text-decoration: none;
+        margin-left: auto;
+    }
+    
+    .images img, .project-list .project img {
+        width: 100%; /* Делаем изображения адаптивными */
+        height: auto;
+    }
+    
+    .project-list {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .project {
+        text-align: center;
+    }
+    
+    .donate button, .volunteers button {
+        width: 100%;
+        padding: 15px;
+        font-size: 18px;
+    }
+
+    .projects.container {
+        width: 100%;
+        max-width: 100%;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+    
+    .project-list {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .project {
+        width: 100%;
+        background: #f9f9f9;
+        padding: 15px;
+        border-radius: 10px;
+    }
+    
+    .project img {
+        width: 100%;
+        height: auto;
+        border-radius: 5px;
+    }
+    
+    .donate.container div {
+        width: 100%;
+        padding: 15px;
+        box-sizing: border-box;
+        margin-bottom: 15px;
+        background: #f9f9f9;
+        border-radius: 10px;
+    }
+    
+    .donate.container h2 {
+        font-size: 18px;
+    }
+    
+    .donate.container p {
+        font-size: 16px;
+    }
+    
+    .donate.container button {
+        width: 100%;
+        padding: 12px;
+        font-size: 16px;
+    }
+    
+}
